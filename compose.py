@@ -1,6 +1,5 @@
 #!/c/Python27/python
 import sys
-#import itertools
 import re
 
 f = {}
@@ -57,8 +56,6 @@ h = {}
 h['OUT'] = f['OUT'].union(g['OUT'])
 h['INT'] = f['INT'].union(g['INT'])
 h['IN'] = f['IN'].union(g['IN']) - h['OUT']
-#h['START'] = set(itertools.product(f['START'],g['START']))
-#h['STATES'] = set(itertools.product(f['STATES'],g['STATES']))
 h['STATES'] = {(X,Y) for X in f['STATES'] for Y in g['STATES']}
 h['START'] = {(X,Y) for X in f['START'] for Y in g['START']}
 h['TRANS'] = set()
@@ -78,8 +75,6 @@ for act in h['ACT']:
         if push == True:
             result += change
             h['TRANS'].add(result)
-
-print len(h['TRANS'])
 
 for key, val in h.iteritems():
     print key
