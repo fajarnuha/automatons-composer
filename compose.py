@@ -35,6 +35,17 @@ for line in file2:
         g[command] = set(n)
         mode = 'read'
 
+ft = {}
+for item in f['TRANS']:
+    sp = item.split(',')
+    ft[sp[0]+">"+sp[1]] = sp[2]
+
+gt = {}
+for item in g['TRANS']:
+    sp = item.split(',')
+    gt[sp[0]+">"+sp[1]] = sp[2]
+
+
 g['ACT'] = g['IN'].union(g['INT']).union(g['OUT']) - set([None])
 
 #validation before composition
@@ -50,6 +61,25 @@ h['IN'] = f['IN'].union(g['IN']) - h['OUT']
 #h['STATES'] = set(itertools.product(f['STATES'],g['STATES']))
 h['STATES'] = {(X,Y) for X in f['STATES'] for Y in g['STATES']}
 h['START'] = {(X,Y) for X in f['START'] for Y in g['START']}
+h['TRANS'] = set()
+h['ACT'] = h['IN'].union(h['INT']).union(h['OUT']) - set([None])
+
+for act in h['ACT']:
+    for state in h['STATES']:
+        result = re.sub(r'\W',"",str(state))+","+act+","
+        push = False
+        change = re.sub(r'\W',"",str(state))
+        if re.sub(r'\W',"",str(state))[:-2]+">"+act in ft:
+            change = change.replace(change[:-2],ft[re.sub(r'\W',"",str(state))[:-2]+">"+act])
+            push = True
+        if re.sub(r'\W',"",str(state))[-2:]+">"+act in gt:
+            change = change.replace(change[-2:],gt[re.sub(r'\W',"",str(state))[-2:]+">"+act])
+            push = True
+        if push == True:
+            result += change
+            h['TRANS'].add(result)
+
+print len(h['TRANS'])
 
 for key, val in h.iteritems():
     print key

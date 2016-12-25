@@ -1,10 +1,14 @@
 INT
 None
+ACT
+rec(m) send(m) init(m)
 STATES
 S1R1 S0R0 S1R0 S0R1
 START
 S0R0
 IN
 init(m)
+TRANS
+S0R1,rec(m),S0R0 S0R0,send(m),S0R1 S1R1,init(m),S1R1 S0R0,init(m),S1R0 S1R0,init(m),S1R0 S1R1,rec(m),S1R0 S0R1,init(m),S1R1 S1R0,send(m),S0R1 S0R1,send(m),S0R1 S1R1,send(m),S0R1
 OUT
 rec(m) send(m)

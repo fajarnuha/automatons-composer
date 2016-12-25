@@ -8,3 +8,5 @@ OUT
 deliver(m)
 INT
 None
+TRANS
+T0,rec(m),T1 T1,rec(m),T1 T1,deliver(m),T0
