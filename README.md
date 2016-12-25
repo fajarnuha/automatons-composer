@@ -2,10 +2,6 @@ I/O Automatons Composer
 ======
 A Distributed Algorithm Project
 
-## Synopsis
-
-???????
-
 ## Environment
 
 Python 2.7
@@ -14,16 +10,17 @@ Python 2.7
 
 * Put the argument after running the program with the name of two textfile inputs
 located in the same folder eg: $ ./compose.py comp1.txt comp2.txt
-* Input file should be like the one in the example, such that:
+* Input file should be like the one in the example, each two consecutive line consist of:
   * firstline is the name of components
   * secondline is all elements of component separated by [SPACE]
+
 
 ## Example
 
 #### Test Case
 
-We use our previous quiz as a test case for this assignment. The problem is we want to
-compose three automatons defined in the comp1.txt comp2.txt and comp3.txt
+We use our previous quiz as a test case for this assignment. The problem is composing
+three automatons defined in the comp1.txt comp2.txt and comp3.txt
 
 #### Run The Program
 
@@ -48,8 +45,8 @@ Finally, we have our result in hasil2.txt
 
 Fajar Ulin Nuha (14/368826/PA/16316)
 
-Andhimas Bagaskara
+Andhimas Bagaskara 
 
-Herdian Dewangga  
+Herdian Dewangga  (14/365382/PA/16095)
 
-Naufal Haidar
+Naufal Haidar (14/360065/PA/15761)
