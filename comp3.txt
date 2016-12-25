@@ -1,0 +1,10 @@
+START
+T0
+STATES
+T0 T1
+IN
+rec(m)
+OUT
+deliver(m)
+INT
+None

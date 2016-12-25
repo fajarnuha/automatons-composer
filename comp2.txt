@@ -1,0 +1,12 @@
+IN
+send(m)
+INT
+None
+OUT
+rec(m)
+STATES
+R0 R1
+START
+R0
+TRANS
+R0,send(m),R1 R1,send(m),R1 R1,rec(m),R0
