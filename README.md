@@ -5,6 +5,14 @@ A Distributed Algorithm Project
 ## Environment
 
 Python 2.7
+(check with python --version in your terminal)
+
+## Synopsis
+
+Automatons composition operation allows an automaton representing a complex system to be
+constructed by composing automata representing individual system component.
+
+*Source : Distributed Algorithms (Book by Nancy Lynch)*
 
 ## Input Fromat
 
@@ -45,7 +53,7 @@ Finally, we have our result in hasil2.txt
 
 Fajar Ulin Nuha (14/368826/PA/16316)
 
-Andhimas Bagaskara 
+Muhammad Andhimas Bagaswara (14/368447/PA/16285)
 
 Herdian Dewangga  (14/365382/PA/16095)
 
