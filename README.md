@@ -53,7 +53,7 @@ Finally, we have our result in hasil2.txt
 
 Fajar Ulin Nuha (14/368826/PA/16316)
 
-Muhammad Andhimas Bagaswara (14/368447/PA/16285)
+Andimas Muhammad Bagaswara (14/368447/PA/16285)
 
 Herdian Dewangga  (14/365382/PA/16095)
 
